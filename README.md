@@ -8,7 +8,7 @@ At the time of writing this document the ISO was `archlinux-2023.07.01-x86_64.is
 - create a [USB flash installation medium](https://wiki.archlinux.org/title/USB_flash_installation_medium)
 - connect power, a monitor and a keyboard to the machine
 - connect a network cable (or optionally none if using WiFi - not recommended) and make sure the network has internet connectivity
-- connect it to the machine and boot from it
+- connect the USB media to the machine and boot from it
 - choose the `Arch Linux install medium (x86_64, BIOS)` option
 - prepare a second machine that can connect to another machine via SSH on the same network
 
