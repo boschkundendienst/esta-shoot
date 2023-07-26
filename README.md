@@ -159,3 +159,37 @@ Installation completed without any errors. You may now reboot.
 ```
 
 And voila, Arch Linux is installed. Remove the USB-drive and enter the command `reboot` to boot into your new, minimal Arch Linux installation.
+
+
+## prepare OS for booting into browser
+
+### become root
+
+```
+[adminuser@shootbox ~]$ sudo -i
+[sudo] Passwort für adminuser:
+[root@shootbox ~]#
+```
+
+### download gist and make it executable
+
+Download [this GIST](https://gist.github.com/boschkundendienst/254dd30de99e9f03820b3ef1dd4501b4/raw), make it executable and run it:
+
+```bash
+[root@shootbox ~]# curl -s -L 'https://gist.github.com/boschkundendienst/254dd30de99e9f03820b3ef1dd4501b4/raw' -o install.bash
+[root@shootbox ~]# chmod +x ./install.bash
+[root@shootbox ~]# ./install.bash
+```
+
+The script should end with the following text:
+
+```
+Even your system may work properly at this point
+you should now reboot the machine with the command 'reboot'
+```
+
+Do a reboot (and let the magic happen - if not already happened).
+
+```bash
+[root@shootbox ~]# reboot
+```
