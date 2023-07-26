@@ -122,6 +122,40 @@ for later use.
 
 ## semi-automated installation (my choice)
 
-blabla
+**the preferred way!**
 
+For semi-automated installation you can clone [this](https://github.com/boschkundendienst/esta-shoot/) git repository which contains `user_configuration.json`, `user_credentials.json`, and `user_disk_layout.json`.
 
+```bash
+root@archiso ~ # git clone https://github.com/boschkundendienst/esta-shoot.git
+root@archiso ~ # cd esta-shoot
+root@archiso ~/esta-shoot (git)-[main] #
+```
+
+Then take a quick look at the 3 files:
+
+Optionally change parameters like `sys-encoding`, `sys-language`, `audio`, bootloader`, `grub-install`, `hostname` and `keyboard-layout` in `user_configuration.json`
+
+Optionally change the partitioning scheme in `user_disk_layout.json`.
+
+Optionally change the user account creationg (including password) in `user_credentials.json`. (Default `adminuser/esta`)
+
+And finally run the installer in silent/unattended mode:
+
+```bash
+root@archiso ~/esta-shoot (git)-[main] # archinstall --config user_configuration.json --creds user_credentials.json --disk_layouts user_disk_layout.json --silent --debug
+```
+
+After a lot of output, the installer should end with:
+
+```
+Testing connectivity to the Arch Linux mirrors ...
+ ! Formatting [BlockDevice(/dev/sda, size=8.0GB, free_space=3145kB+3146kB, bus_type=sata)] in 5....4....3....2....1....
+Creating a new partition label on /dev/sda
+...
+...
+Updating /mnt/archinstall/etc/fstab
+Installation completed without any errors. You may now reboot.
+```
+
+And voila, Arch Linux is installed. Remove the USB-drive and enter the command `reboot` to boot into your new, minimal Arch Linux installation.
