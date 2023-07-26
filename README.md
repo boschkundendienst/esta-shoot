@@ -107,3 +107,21 @@ root@archiso ~ #
 ```
 
 **Now on SSH we can easily copy/paste and download scripts/configurations from this repo!**
+
+## manual installation
+
+You can now run `archinstall` and do a guided installation. If doing so I would recommend you store your configuration files
+
+```
+user_configuration.json
+user_credentials.json
+user_disk_layout.json
+```
+
+for later use.
+
+## semi-automated installation (my choice)
+
+blabla
+
+
