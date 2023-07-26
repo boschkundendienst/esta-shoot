@@ -127,6 +127,7 @@ for later use.
 For semi-automated installation you can clone [this](https://github.com/boschkundendienst/esta-shoot/) git repository which contains `user_configuration.json`, `user_credentials.json`, and `user_disk_layout.json`.
 
 ```bash
+root@archiso ~ # pacman -Sy git --noconfirm
 root@archiso ~ # git clone https://github.com/boschkundendienst/esta-shoot.git
 root@archiso ~ # cd esta-shoot
 root@archiso ~/esta-shoot (git)-[main] #
