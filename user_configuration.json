@@ -111,7 +111,7 @@
     "packages": [
         "vim",
         "htop",
-        "reflector"
+	"reflector"
     ],
     "profile": {
         "path": "/usr/lib/python3.11/site-packages/archinstall/profiles/minimal.py"
