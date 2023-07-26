@@ -5,8 +5,7 @@ Setup steps to boot archlinux into a browser on a Fujitsu S740 Futro Mini PC (In
 
 At the time of writing this document the ISO was `archlinux-2023.07.01-x86_64.iso`.
 
-Create a [USB flash installation medium](https://wiki.archlinux.org/title/USB_flash_installation_medium)
-
+- create a [USB flash installation medium](https://wiki.archlinux.org/title/USB_flash_installation_medium)
 - connect power, a monitor and a keyboard to the machine
 - connect a network cable (or optionally none if using WiFi - not recommended) and make sure the network has internet connectivity
 - connect it to the machine and boot from it
