@@ -101,7 +101,7 @@
             "dhcp": true,
             "dns": null,
             "gateway": null,
-            "iface": "enp0s3",
+            "iface": "enp*",
             "ip": null,
             "type": "manual"
         }
