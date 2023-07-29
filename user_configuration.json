@@ -118,7 +118,7 @@
     },
     "script": "guided",
     "silent": false,
-    "swap": true,
+    "swap": false,
     "sys-encoding": "utf-8",
     "sys-language": "de_DE.UTF-8",
     "version": "2.5.6"
