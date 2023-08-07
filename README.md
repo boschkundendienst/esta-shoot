@@ -168,7 +168,7 @@ Within your new Arch installation enter the following commands:
 ```
 [adminuser@shootbox ~]$ sudo -i
 [root@shootbox ~]# pacman -S openssh git
-[root@shootbox ~]# systemctl --enable --now sshd
+[root@shootbox ~]# systemctl enable --now sshd
 ```
 
 Now SSH into the new installation and do a:
