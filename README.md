@@ -3,7 +3,8 @@ Setup steps to boot archlinux into a browser on a Fujitsu S740 Futro Mini PC (In
 
 ## Boot from Archlinux installation ISO
 
-At the time of writing this document the ISO was `archlinux-2023.07.01-x86_64.iso`. Whenever I need this repo for myself and Arch has a new installation ISO I will ceate a subfolder with a working version.
+Whenever I need this repo for myself and Arch has a new installation ISO I will ceate a subfolder with a working version
+for that release.
 
 - create a [USB flash installation medium](https://wiki.archlinux.org/title/USB_flash_installation_medium)
 - connect power, a monitor and a keyboard to the machine
@@ -115,7 +116,6 @@ You can now run `archinstall` and do a guided installation. If doing so I would 
 ```
 user_configuration.json
 user_credentials.json
-user_disk_layout.json
 ```
 
 for later use.
@@ -137,14 +137,14 @@ Then take a quick look at the 3 files:
 
 Optionally change parameters like `sys-encoding`, `sys-language`, `audio`, bootloader`, `grub-install`, `hostname` and `keyboard-layout` in `user_configuration.json`
 
-Optionally change the partitioning scheme in `user_disk_layout.json`.
+Optionally change the partitioning scheme also within that file..
 
 Optionally change the user account creationg (including password) in `user_credentials.json`. (Default `adminuser/esta`)
 
 And finally run the installer in silent/unattended mode:
 
 ```bash
-root@archiso ~/esta-shoot (git)-[main] # archinstall --config user_configuration.json --creds user_credentials.json --disk_layouts user_disk_layout.json --silent --debug
+root@archiso ~/esta-shoot (git)-[main] # archinstall --config 2023.08.01/user_configuration.json --creds 2023.08.01/user_credentials.json --silent --debug
 ```
 
 After a lot of output, the installer should end with:
@@ -163,15 +163,21 @@ And voila, Arch Linux is installed. Remove the USB-drive and enter the command `
 
 ## setup boot into browser
 
-We will now download a special [GIST](https://gist.github.com/boschkundendienst/254dd30de99e9f03820b3ef1dd4501b4/raw) and execute it to set the system up to boot directly into a browser.
+Within your new Arch installation enter the following commands:
 
-```bash
+```
 [adminuser@shootbox ~]$ sudo -i
-[sudo] Passwort für adminuser:
-[root@shootbox ~]#
-[root@shootbox ~]# curl -s -L 'https://gist.github.com/boschkundendienst/254dd30de99e9f03820b3ef1dd4501b4/raw' -o install.bash
-[root@shootbox ~]# chmod +x ./install.bash
-[root@shootbox ~]# ./install.bash
+[root@shootbox ~]# pacman -S openssh git
+[root@shootbox ~]# systemctl --enable --now sshd
+```
+
+Now SSH into the new installation and do a:
+
+```
+[adminuser@shootbox ~]$ sudo -i
+[root@shootbox ~]# git clone https://github.com/boschkundendienst/esta-shoot 
+[root@shootbox ~]# chmod +x 2023.08.01/install.bash 
+[root@shootbox ~]# ./2023.08.01/install.bash 
 ```
 
 The script should end with the following lines:
