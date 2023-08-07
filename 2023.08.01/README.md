@@ -1,5 +1,13 @@
 ## fixes for 2023.08.01
-`archinstall` did not add necessary `safe_dev_path` after `obj_id`. Manual fix was needed:
+
+### changes in configuration format
+
+- the disk layout is now part of `user_configuration.json`
+- `user_disk_layout.json` has been removed from `archinstall` 
+
+### missing safe_dev_path
+
+- `archinstall` did not add necessary `safe_dev_path` after `obj_id`. Manual fix was needed:
 
 ```
 ...
