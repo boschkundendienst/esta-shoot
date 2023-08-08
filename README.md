@@ -3,7 +3,7 @@ Setup steps to boot archlinux into a browser on a Fujitsu S740 Futro Mini PC (In
 
 ## Boot from Archlinux installation ISO
 
-Whenever I need this repo for myself and Arch has a new installation ISO I will ceate a subfolder with a working version
+Whenever I need this repo for myself and Arch has a new installation ISO I will create a subfolder with a working version
 for that release.
 
 - create a [USB flash installation medium](https://wiki.archlinux.org/title/USB_flash_installation_medium)
