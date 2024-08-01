@@ -171,7 +171,10 @@
         "vim",
         "curl",
         "wget",
-        "axel"
+        "axel",
+        "htop",
+        "reflector",
+        "jq"
     ],
     "parallel downloads": 0,
     "profile_config": {
